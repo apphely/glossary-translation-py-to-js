@@ -1,12 +1,60 @@
-<div>
-    <title>Glossary Translation</title>
-    <span>English Words:</span>
+<style>
+    .en-title{
+        display: flex;
+        width: 51%;
+        float: left;
+        }
+    .gloss-h1{
+        text-align: center;
+        display: block;
+    }
+    button, input, optgroup, select, textarea #inputText #outputText{
+        font-family: inherit;
+        font-feature-settings: inherit;
+        font-variation-settings: inherit;
+        font-size: 100%;
+        font-weight: inherit;
+        line-height: inherit;
+        color: inherit;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        border: 0 solid #e5e7eb;
+    }
+    #inputText{
+        width: 49%;
+        height: 100px;
+        float: left;
+        margin-right: 24.984px;
+        background: rgb(0 0 0 / 30%);
+        border-radius: 10px;
+    }
+    #outputText{
+        width: 40%;
+        height: 100px;
+        float: left;
+        background: rgb(0 0 0 / 30%);
+        border-radius: 10px;
+    }
+    .buttons1{
+        border: 3px solid grey;
+        margin-bottom: 5px;
+        cursor: pointer;
+        width: 100%;
+        height: 30px;
+        margin-top: 15px;
+        border-radius: 10px;
+    }
+</style>
+
+    <h1 class="gloss-h1">Glossary Translation</h1>
+    <span class="en-title">English Words:</span>
     <span>Turkish Translation:</span>
     <input type="text" id="inputText">
     <input type="text" id="outputText" readonly="">
 
-    <button onclick="translate()">Translate</button>
-    <button onclick="copy()">Copy Translations</button>
+    <button class="buttons1" onclick="translate()">Translate</button>
+    <button class="buttons1" onclick="copy()">Copy Translations</button>
 
 <script>
     function translate() {
